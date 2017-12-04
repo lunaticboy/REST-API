@@ -19,3 +19,10 @@ def showbynum(num):
 @app.route('/show/<int:page>',methods=['GET'])
 def showten(page):
 	return jsonify(show_ten(page))
+
+@app.route('/insert')
+def insertion():
+	truck_no = request.args.get('truck_no')
+	lat = request.args.get('lat')
+	log = request.args.get('log')
+	return truck_no + " "+ lat + " " + log + "inserted"
