@@ -15,3 +15,7 @@ def showbyid(id):
 @app.route('/showbynum/<num>',methods=['GET'])
 def showbynum(num):
 	return jsonify(show_by_num(num))
+
+@app.route('/show/<int:page>',methods=['GET'])
+def showten(page):
+	return jsonify(show_ten(page))

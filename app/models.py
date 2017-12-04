@@ -23,3 +23,12 @@ def show_all_trucks():
 		cur = con.cursor()
 		cur.execute('SELECT * FROM truck')
 		con.commit()
+def show_ten(page):
+	with sql.connect('database.db') as con:
+		cur = con.cursor()
+		result = None
+		if page == 1:
+			result = con.execute('SELECT truck_no,lat,log FROM truck LIMIT 10')
+		else:
+			result = con.execute('SELECT truck_no,lat,log FROM truck LIMIT 10 OFFSET 10')
+		return result.fetchall()
