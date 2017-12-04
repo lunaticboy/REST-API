@@ -1,6 +1,27 @@
-<html>
-<head>Roadpiper Assignment</head>
-<body>
-	<p> Backend Development</p>
-</body>
-</html>
+{% extends "base.html"%}
+{%block content%}
+<button id="id_submit" type="submit">View by ID</button>
+<script type="text/javascript">
+	document.getElementById("id_submit").onclick = function() {
+		location.href = "http://www.youtube.com";
+	};
+</script>
+<button id="num_submit" type="submit">View by truck no</button>
+<script type="text/javascript">
+	document.getElementById("num_submit").onclick = function() {
+		location.href = "http://www.youtube.com";
+	};
+</script>
+<button id="dis_submit" type="submit">View page</button>
+<script type="text/javascript">
+	document.getElementById("dis_submit").onclick = function() {
+		location.href = "http://www.youtube.com";
+	};
+</script>
+<button id="_in_submit" type="submit">Insert</button>
+<script type="text/javascript">
+	document.getElementById("in_submit").onclick = function() {
+		location.href = "http://www.youtube.com";
+	};
+</script>
+{% endblock %}
