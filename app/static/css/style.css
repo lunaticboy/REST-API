@@ -1,0 +1,31 @@
+.head {
+	background-color: red;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-family: "Sans-serif";
+}
+.mid {
+	background-color: #9999ff
+}
+.but {
+	background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    height: 90px;
+    width: 40%;
+}
+.foot {
+	height: 50px;
+	padding-top: 8px;
+	background-color: grey
+}

@@ -1,0 +1,25 @@
+REST-API using Python2.7, flask and sqllite3
+
+Usage: python run.py
+
+URLs:-
+1.) '/' OR '/index' for index.html page (Buttons not working)
+
+2.) /showbyid/<int:id> to list truck by id [Eg: /showbyid/1]
+
+3.) /showbynum/<num> to list truck by truck_no [Eg: /showbynum/10001]
+
+4.) /show/<int:page> to list truck by 10 trucks per page [Eg: /show/1]
+
+5.) /insert  to insert new truck [Eg. /insert?truck_no=10123&lat=12.34&log=23.10]
+	     return truck_no, lat, log inserted
+
+
+sqlite3 schema:
+create table truck (
+	id integer primary key autoincrement
+	truck_no integer not null
+	lat text not null
+	log text not null
+	);
+
