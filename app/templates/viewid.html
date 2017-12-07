@@ -1,17 +1,8 @@
 {% extends "base.html" %}
 {% blockcontent %}
-<table>
-	<tr>
-		<th>Truck No.</th>
-		<th>Latitude</th>
-		<th>Longitude</th>
-	</tr>
-	{{% for d in data %}}
-	<tr>
-		<td>{{d['truck_no']}}</td>
-		<td>{{d['lat']}}</td>
-		<td>{{d['log']}}</td>
-	</tr>
-	<% endfor %>
-</table>
+<form>
+	Truck ID: <input type="text" name="truck_id" value="" maxlength="100" />
+	<br><br>
+	<input type="submit" value="Search">
+</form>
 {% endblock %}

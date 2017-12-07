@@ -1,4 +1,4 @@
-REST-API using Python2.7, flask and sqllite3
+REST-API using Python2.7, flask and sqlite3
 
 Usage: python run.py
 
@@ -11,7 +11,7 @@ URLs:-
 
 4.) /show/<int:page> to list truck by 10 trucks per page [Eg: /show/1]
 
-5.) /insert  to insert new truck [Eg. /insert?truck_no=10123&lat=12.34&log=23.10]
+5.) /insert  to insert new truck [Eg. /insert?truck_no=20123&lat=12.34&log=23.10]
 	     return truck_no, lat, log inserted
 
 

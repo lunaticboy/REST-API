@@ -25,4 +25,5 @@ def insertion():
 	truck_no = request.args.get('truck_no')
 	lat = request.args.get('lat')
 	log = request.args.get('log')
+	insert_truck(truck_no,lat,log)
 	return truck_no + " "+ lat + " " + log + "inserted"

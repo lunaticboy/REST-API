@@ -1,10 +1,15 @@
 {% extends "base.html"%}
 {%block content%}
 <link rel="stylesheet" href={{url_for('static',filename='css/style.css')}}>
+<script src="text/javascript">
+	function showById() {
+		window.alert("clicked")
+	}
+</script>
 	<div class="mid" align="center">
-		<button class="but" id="but_id" type="submit">Truck ID</button><br><br>
-		<button class="but" id="but_num" type="submit">Truck Number</button><br><br>
-		<button class="but" id="but_insert" type="submit">Insert Truck</button><br><br>
-		<button class="but" id="but_show" type="submit">Show pagewise</button>
+		<button class="but" id="1" type="submit" oncCick="showById()">Truck ID</button><br><br>
+		<button class="but" id="2" type="submit" >Truck Number</button><br><br>
+		<button class="but" id="3" type="submit")>Insert Truck</button><br><br>
+		<button class="but" id="4" type="submit")">Show pagewise</button>
 	</div>
 {% endblock %}
