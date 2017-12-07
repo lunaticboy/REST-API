@@ -1,7 +1,6 @@
 from app import app
-from flask import render_template,redirect,request,flash,g,session,url_for
 from models import *
-from flask import jsonify
+from flask import jsonify,render_template
 
 @app.route('/')
 @app.route('/index')
@@ -22,8 +21,11 @@ def showten(page):
 
 @app.route('/insert')
 def insertion():
-	truck_no = request.args.get('truck_no')
-	lat = request.args.get('lat')
-	log = request.args.get('log')
-	insert_truck(truck_no,lat,log)
-	return truck_no + " "+ lat + " " + log + "inserted"
+	if 'truck_no' in request.args and 'lat' in request.args and 'log' in request.args:
+		truck_no = request.args.get('truck_no')
+		lat = request.args.get('lat')
+		log = request.args.get('log')
+		insert_truck(truck_no,lat,log)
+		return truck_no + " "+ lat + " " + log + " inserted"
+	else:
+		return "Error: All fields are mandatory"
